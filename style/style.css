@@ -1,0 +1,372 @@
+ /* ===== Variables ===== */
+
+ :root {
+    --primary-color:B;
+    --secondary-color: #0096A6;
+    --adj-color: #f5f5f5;
+    --comp-color:#AABAEE;
+    --Tertiary-color: #185A7F;
+    --margin: 10px;
+}
+
+/*========header====================*/
+
+
+.logo{background: var(--secondary-color);
+    text-align: center;
+    padding: 5px;
+margin: auto;}
+
+.flat {
+    margin: 5px;
+}
+
+h1 {
+    display: flex;z
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+h3{font-size: 13px;
+color: var(--Tertiary-color);
+line-height: 30px;
+letter-spacing: 1px;}
+
+
+/*===== =====*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--adj-color);
+    font-family: 'Roboto';
+    font-size: 80%;
+    margin: auto;
+  
+}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+    width: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+
+
+/*================menu=========*/
+
+@media (min-width: 979px) and (max-width: 2000px) {
+    body #page {
+        width: 1400px;
+        margin: auto
+    }
+    nav .menu {
+        display: flex;
+        justify-content: center;
+    }
+    .font2 {
+        display: none;
+    }
+}
+
+@media (max-width: 979px) {
+    .font3 {
+        display: none;
+    }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,800);
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+
+
+nav {
+    display: block;
+    background: var(--primary-color);
+}
+
+.menu {
+    display: block;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+}
+
+.menu li:first-child {
+    margin-left: 0;
+}
+
+.menu li a {
+    font-weight: 600;
+    text-decoration: none;
+    padding: 20px 15px;
+    display: block;
+    color: var(--adj-color);
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.menu li a:hover,
+.menu li:hover > a {
+    color: var(--adj-color);
+    background: var(--secondary-color);
+}
+
+.menu ul {
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    width: 170px;
+    position: absolute;
+    left: 0px;
+    background: var(--adj-color);
+    z-index: 99;
+    transform: translate(0, 20px);
+    transition: all 0.2s ease-out;
+}
+
+.menu ul:after {
+    bottom: 100%;
+    left: 20%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: var(--adj-color);
+    border-width: 6px;
+    margin-left: -6px;
+}
+
+.menu ul li {
+    display: block;
+    float: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+    color: var(--secondary-color);
+    background: var(--adj-color);
+
+}
+
+.menu ul li a:hover,
+.menu ul li:hover > a {
+    background: var(--secondary-color);
+    color: var(--adj-color);
+}
+
+.menu li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.menu ul ul {
+    left: 169px;
+    top: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(20px, 20px);
+    transition: all 0.2s ease-out;
+}
+
+.menu ul ul:after {
+    left: -6px;
+    top: 10%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: var(--adj-color);
+    border-width: 6px;
+    margin-top: -6px;
+}
+
+.menu li > ul ul:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.responsive-menu {
+    display: none;
+    width: 100%;
+    padding: 20px 15px;
+    background: var(--primary-color);
+    color: var(--adj-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+
+.responsive-menu:hover {
+    background: var(--secondary-color);
+    color: var(--adj-color);
+    text-decoration: none;
+}
+
+a.accueil {
+    background: var(--secondary-color);
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .mainWrap {
+        width: 768px;
+    }
+    .menu ul {
+        top: 37px;
+    }
+    .menu li a {
+        font-size: 13px;
+    }
+    a.accueil {
+        background: var(--primary-color);
+    }
+}
+
+@media (max-width: 767px) {
+    .mainWrap {
+        width: auto;
+        padding: 50px 20px;
+    }
+    .menu {
+        display: none;
+    }
+    .responsive-menu {
+        display: block;
+    }
+    nav {
+        margin: 0;
+        background: none;
+    }
+    .menu li {
+        display: block;
+        margin: 0;
+    }
+    .menu li a {
+        background: var(--adj-color);
+        color: var(--secondary-color);
+    }
+    .menu li a:hover,
+    .menu li:hover > a {
+        background: var(--primary-color);
+        color: var(--adj-color);
+    }
+    .menu ul {
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: initial;
+    }
+    .menu li:hover > ul {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        transform: initial;
+    }
+    .menu ul ul {
+        left: 0;
+        transform: initial;
+    }
+    .menu li > ul ul:hover {
+        transform: initial;
+    }
+
+}
+
+
+/*============accueil=============*/
+#emergence{
+    box-shadow: var(--Tertiary-color);
+    display: flex;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px;
+}
+.emergence{font-family: Futura Md BT;
+    text-transform: uppercase;
+text-align: center;}
+/*==================footer===========*/
+#flex-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;}
+.social img{width: 40px;
+margin: 1px;}
+.footer {
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+    background: var(--primary-color);
+    color: var(--adj-color);
+    padding: 20px 0px;
+    font: 15px "Open Sans", Helvetica, Arial,
+    sans-serif;
+  
+
+}
+
+
